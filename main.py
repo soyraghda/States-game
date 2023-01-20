@@ -10,7 +10,8 @@ turtle.shape(img)
 all_states = []
 
 while len(all_states) < 50:
-    guess = screen.textinput(title=f"{len(all_states)}/50 States Correct", prompt="Write down the name of a state:").title()
+    guess = screen.textinput(title=f"{len(all_states)}/50 States Correct",
+                             prompt="Write down the name of a state:").title()
     answer = Answer(guess)
     t = turtle.Turtle()
 

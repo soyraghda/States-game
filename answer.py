@@ -21,10 +21,6 @@ class Answer:
 
     def get_missing(self, all_states):
         csv = pandas.read_csv("50_states.csv")
-        missing = []
-        for i in csv['state'].values:
-            if i not in all_states:
-                missing.append(i)
-                print(i)
+        missing=[ i for i in csv['state'].values if i not in all_states]
         df = pandas.DataFrame(missing)
         df.to_csv("./not guessed/missing_states.csv")
